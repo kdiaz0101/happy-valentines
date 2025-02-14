@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Happy Valentine's Day BEBEPATOOTIE</title>
   <style>
-    /* Style for fullscreen video container */
+    /* Reset styles for full-screen layout */
     body, html {
       margin: 0;
       padding: 0;
@@ -27,18 +27,17 @@
       position: absolute;
       top: 50%;
       left: 50%;
-      min-width: 100%;
-      min-height: 100%;
-      transform: translate(-50%, -50%);
-      object-fit: cover; /* Ensures the video fills the container */
+      width: 100%; /* Ensure video spans the full width */
+      height: 100%; /* Ensure video spans the full height */
+      object-fit: cover; /* Makes the video fill the container without distortion */
+      transform: translate(-50%, -50%); /* Centers the video */
     }
 
-    /* Fallback text/message for unsupported devices */
+    /* Fallback message for unsupported devices */
     .fallback-message {
       display: none; /* Hide by default */
     }
 
-    /* Show fallback if video isn't supported */
     video:unsupported + .fallback-message {
       display: block;
       position: fixed;
@@ -47,6 +46,10 @@
       transform: translate(-50%, -50%);
       font-family: Arial, sans-serif;
       text-align: center;
+      color: #fff;
+      background-color: rgba(0, 0, 0, 0.7); /* Add a background for readability */
+      padding: 20px;
+      border-radius: 10px;
     }
   </style>
 </head>
